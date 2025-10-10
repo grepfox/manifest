@@ -2,15 +2,15 @@
 <manifest>
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
-  <project remote="clo-la" name="platform/hardware/qcom/audio-ar" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="1e870b74cc6ceb28833ac2ff545cd92d99383594" upstream="refs/heads/audio-android-hal.lnx.3.0.r10-rel" groups="base">
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk"/>
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/{target_product}/audio-techpack.mk"/>
+  <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="35211a9255b69d52ddc2b82dc8b1dd2840b98868" upstream="refs/heads/mmrm-kernel.lnx.4.0.r2-rel" groups="cyborg">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/mmrm_kernel_board.mk" src="mmrm_kernel_board.mk"/>
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk"/>
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/audio-hal/st-hal-ar" path="vendor/qcom/opensource/audio-hal/st-hal" revision="412e873554f64cba70b6109fae9c20abdfc862ed" upstream="refs/heads/audio-android-hal.lnx.3.0.r10-rel" groups="hal"/>
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/agm" path="vendor/qcom/opensource/agm" revision="20f4115a96bfa33888deea961984d73c9d242872" upstream="refs/heads/audio-platform-arintf.lnx.2.0.r1-rel" groups="hal"/>
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/arpal-lx" path="vendor/qcom/opensource/pal" revision="46b471adfe8ee337beb17168362ef3d38ed5fc8e" upstream="refs/heads/audio-platform-arintf.lnx.2.0.r1-rel" groups="hal"/>
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-kernel-ar" path="vendor/qcom/opensource/audio-kernel" revision="0dbde6cfa374af7bd98ba891a187cef1ac4bfc1d" upstream="refs/heads/audio-kernel.lnx.6.0.r1-rel" groups="kernel">
-    <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk"/>
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk"/>
+  <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="60d19eb2348b7b50c4860ff669e12a274d7937cd" upstream="refs/heads/video-kernel.lnx.4.0.r2-rel" groups="cyborg">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk"/>
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk"/>
   </project>
+  <project remote="clo-la" name="platform/vendor/opensource/video-driver-test" path="vendor/qcom/opensource/video-driver/test" revision="66256693d2930b5846686fa1894fd42e8b7b8d5a" upstream="refs/heads/video-kernel.lnx.4.0.r2-rel" groups="cyborg"/>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/wfd-commonsys" path="vendor/qcom/opensource/wfd" revision="e79944ac4f9e8472bfadf411da514b4010350185" upstream="refs/heads/wfd-userspace.lnx.8.4.0.r2-rel"/>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/video-qapi" path="vendor/qcom/opensource/video-qapi" revision="4acca4ec7ca1dbdf43d58e6381f3785cda113b09" upstream="refs/heads/video-userspace.lnx.codec2.4.0.r3-rel"/>
 </manifest>
